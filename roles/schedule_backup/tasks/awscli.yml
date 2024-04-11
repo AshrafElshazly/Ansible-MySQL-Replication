@@ -1,22 +1,22 @@
 ---
-# - name: Ensure unzip is installed
-#   become: yes
-#   package:
-#     name: unzip
-#     state: present
+- name: Ensure unzip is installed
+  become: yes
+  package:
+    name: unzip
+    state: present
 
-# - name: Download AWS CLI installation archive
-#   shell: "curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'awscliv2.zip'"
-#   args:
-#     chdir: "~"
+- name: Download AWS CLI installation archive
+  shell: "curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'awscliv2.zip'"
+  args:
+    chdir: "~"
 
-# - name: Extract AWS CLI installation archive
-#   shell: "unzip awscliv2.zip"
-#   args:
-#     chdir: "~"
+- name: Extract AWS CLI installation archive
+  shell: "unzip awscliv2.zip"
+  args:
+    chdir: "~"
 
-# - name: Install AWS CLI
-#   shell: "sudo ~/aws/install"
+- name: Install AWS CLI
+  shell: "sudo ~/aws/install"
 
 - name: Ensure AWS credentials directory exists
   file:
