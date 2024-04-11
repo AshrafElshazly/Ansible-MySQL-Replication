@@ -1,0 +1,8 @@
+mysql_user: root
+mysql_password: password
+database: node
+s3_bucket: "bucket_name"
+s3_path: "path"
+backup_dir: "you_backup_dir"
+aws_access_key_id: you_access_key
+aws_secret_access_key: you_secret_key
